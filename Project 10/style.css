@@ -1,0 +1,108 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.dice-area {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.dice {
+  font-size: 60px;
+  transition: transform 0.3s ease;
+}
+
+.dice.roll {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(5deg); }
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.history {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.history h3 {
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 0;
+}
+
+.history li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+#clearHistory {
+  margin-top: 10px;
+  background-color: crimson;
+}
+
+#clearHistory:hover {
+  background-color: darkred;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
